@@ -1,0 +1,64 @@
+.container {
+  padding: 1.5rem;
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+}
+
+.logo > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.logo > span {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.search {
+  width: 10rem;
+  padding: 0.5rem;
+}
+
+.cart {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.bars {
+  display: none;
+}
+
+@media screen and (max-width: 856px) {
+  .search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .bars {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
