@@ -2,7 +2,7 @@
   "name": "my-ecommerce-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Phindilereigns.github.io/e-commerce-site",
+  "homepage": "https://Phindilereigns.github.io/e-commerce-site",
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
     "@heroicons/react": "^2.1.5",

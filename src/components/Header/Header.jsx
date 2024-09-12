@@ -15,7 +15,7 @@ const Header = () => {
     <div className={css.container}>
       <div className={css.logo}>
         <img src={Logo} alt="Logo" />
-        <span>skinProMax</span>
+        <span>SkinProMax</span>
       </div>
 
       <div className={css.right}>
