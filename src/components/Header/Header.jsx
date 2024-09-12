@@ -1,41 +1,42 @@
 import React, { useState } from "react";
-import styles from "./Header.module.css";
+import css from "./Header.module.css";
+import Logo from "../../assets/logo.png";
 import { CgShoppingBag } from "react-icons/cg";
-import { AiOutlineMenu } from "react-icons/ai";
-import Logo from "../../assets/logo.png"; // Use your logo
+import { HiOutlineMenu } from "react-icons/hi";
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(true);
+  const [ShowMenu, setShowMenu] = useState(true);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMenu((ShowMenu) => !ShowMenu);
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.logo}>
-        <img src={Logo} alt="Reigns" />
-        <span>Reigns</span>
+    <div className={css.container}>
+      <div className={css.logo}>
+        <img src={Logo} alt="Logo" />
+        <span>skinProMax</span>
       </div>
 
-      <div className={styles.right}>
-        <div className={styles.bars} onClick={toggleMenu}>
-          <AiOutlineMenu />
+      <div className={css.right}>
+        <div className={css.bars} onClick={toggleMenu}>
+          <HiOutlineMenu />
         </div>
 
         <ul
-          className={styles.menu}
-          style={{ display: showMenu ? "inherit" : "none" }}
+          className={css.menu}
+          style={{ display: ShowMenu ? "inherit" : "none" }}
         >
           <li>Collections</li>
           <li>Brands</li>
+          <li>New</li>
           <li>Sales</li>
-          <li>Top Rated</li>
+          <li>ZAR</li>
         </ul>
 
-        <input type="text" className={styles.search} placeholder="Search" />
+        <input type="text" className={css.search} placeholder="Search" />
 
-        <CgShoppingBag className={styles.cart} />
+        <CgShoppingBag className={css.cart} />
       </div>
     </div>
   );

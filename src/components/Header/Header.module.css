@@ -11,34 +11,49 @@
 }
 
 .logo > img {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .logo > span {
   font-weight: 600;
-  font-size: 1.5rem;
 }
 
 .right {
   display: flex;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  font-weight: 500;
   list-style: none;
 }
 
+.menu > li {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.menu > li:hover {
+  color: #fe956f;
+}
+
 .search {
-  width: 10rem;
-  padding: 0.5rem;
+  width: 7rem;
+  height: 30%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem;
 }
 
 .cart {
-  width: 2rem;
+  width: 1.5rem;
+  width: 1.5rem;
   cursor: pointer;
 }
 
@@ -50,14 +65,35 @@
   .search {
     display: none;
   }
+
+  .right {
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
+  .right {
+    position: absolute;
+    right: 2rem;
+    z-index: 9999;
+    background-color: white;
+    color: var(--black);
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    margin-left: -2rem;
+    display: none;
+  }
+
   .bars {
     display: block;
   }
 
-  .menu {
+  .search {
     display: none;
   }
 }
